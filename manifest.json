@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Insta Farm",
+    "version": "1.0",
+    "description": " Extension to follow insta account automatically",
+    "icons": {
+        "128": "assets/icons/128.png",
+        "48": "assets/icons/48.png",
+        "16": "assets/icons/16.png"
+    },
+    "browser_action": {
+        "default_action": "16.png",
+        "default_popup": "popup.html",
+        "default_title": "Insta Farm"
+    },
+    "permissions": [
+        "tabs",
+        "<all_urls>",
+        "storage",
+        "browsingData"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "assets/js/script.js"
+            ]
+        }
+    ]
+}
